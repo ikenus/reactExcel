@@ -7,4 +7,12 @@ const List = (props) => {
     );
 };
 
+List.defaultProps = {
+  elementi: [{name: "a"},{name: "b"}]
+
+};
+List.propTypes = {
+  elementi: PropTypes.array.isRequired
+};
+
 export default List;
