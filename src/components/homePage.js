@@ -1,16 +1,18 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+import List from './List.js';
 
 class Home extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+          "lista": [{"name": "1"},{"name": "2"},{"name": "3"}]
+    };
+  }
   render () {
     return(
-      <ul>
-        <li>Home</li>
-        <li>List</li>
-        <li>List2</li>
-        <li>DOM</li>
-      </ul>
-    )
+        <List elementi={this.state.lista} />
+    );
   }
 }
 
-export default Home ;
+export default Home;
